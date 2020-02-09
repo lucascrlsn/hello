@@ -1,5 +1,3 @@
-This repository is a personal collection. I hope to place most of the functionality behind python into a GUI such as Tkinter as I try out different modules and API's. The primary sources of my work comes from the Youtube channels below.
-
 **Youtube Beginners Playlists:**
 - [Ajay Mohandhas](https://www.youtube.com/channel/UCvOEz4Bf8IxgMW1tKdcnrJQ)
 
