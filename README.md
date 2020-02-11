@@ -16,6 +16,8 @@ ________________________________________________________________________________
 - [Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7)
 
 In these Python Beginner Tutorials, we will be learning the fundamentals of Python programming from the ground up. We will be learning how to: install/setup Python on Mac and Windows, work with basic data types, write conditionals, write for/while loops, write functions, import modules, and explore the standard library.
+
+For the difference between Threading and Multi-Processing try [this video]{https://www.youtube.com/watch?v=IEEhzQoKtQU}
 ______________________________________________________________________________________________________________________________
 - [freeCodeCamp](https://www.youtube.com/watch?v=rfscVS0vtbw&list=PLWKjhJtqVAbnqBxcdjVGgT3uVR10bzTEB)
 
