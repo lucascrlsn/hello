@@ -1,0 +1,37 @@
+import PyPDF2 as PDF 
+import re
+
+# Sources
+# https://stackoverflow.com/questions/58484128/find-multiple-words-from-multiple-pdf-files-with-python
+
+p = PDF.PdfFileReader('mypdfname.pdf')
+
+# get number of pages
+NumPages = p.getNumPages()
+
+item_count = 0
+
+# define keyterms; Term, Term, Term, Term, Term
+kTerm = 'error, page, result, term, term, term'.replace(", ", "|")
+
+
+def init_search():
+    # extract text and do the search
+    for i in range(0, NumPages):
+        PageObj = p.getPage(i)
+        print("Looking through page " + str(i))
+        Text = PageObj.extractText()
+        Result = re.search(kTerm, Text)
+        global  item_count
+
+        if Result:
+             print(f"\"{kTerm}\" found")
+             item_count = item_count + 1
+
+        else:
+             print("0")
+
+    print(f'{item_count} term(s) found')
+
+
+init_search()
