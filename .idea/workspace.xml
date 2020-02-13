@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XgohEfEGNTX5BoNGmjXRspV4S2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="tkinter_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tkinter" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tkinter/tkinter_practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tkinter_practice" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="" />
+      <created>1581477216045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581477216045</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Reformat">
+      <created>1581525931774</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581525931775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="348" y="23" key="#tkinter_practice" timestamp="1581617369522">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="348" y="23" key="#tkinter_practice/0.23.1280.777@0.23.1280.777" timestamp="1581617369522" />
+    <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2" timestamp="1581525931328">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1581525931328" />
+    <state width="1259" height="197" key="GridCell.Tab.0.bottom" timestamp="1581617628023">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1259" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581617628023" />
+    <state width="1259" height="197" key="GridCell.Tab.0.center" timestamp="1581617628022">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1259" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581617628022" />
+    <state width="1259" height="197" key="GridCell.Tab.0.left" timestamp="1581617628022">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1259" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581617628022" />
+    <state width="1259" height="197" key="GridCell.Tab.0.right" timestamp="1581617628023">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="1259" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581617628023" />
+    <state x="240" y="151" key="Vcs.Push.Dialog.v2" timestamp="1581525943960">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="240" y="151" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1581525943960" />
+  </component>
+</project>
