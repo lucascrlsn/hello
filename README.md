@@ -39,7 +39,9 @@ Even though we won’t cover everything there is to know about Python in the cou
 ______________________________________________________________________________________________________________________________
 - [Programming Knowledge](https://www.youtube.com/playlist?list=PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n)
 
-Python Object Oriented - Learning Python in simple and easy steps ,python,xml,script,install, A beginner's tutorial containing complete knowledge of Python Syntax Object Oriented Language, Methods, Tuples,Learn,Python,Tutorial,Interactive,Free, Tools/Utilities,Getting the most popular pages from your Apache logfile,Make your life easier with Virtualenvwrapper,This site now runs on Django,PythonForBeginners.com has a new owner,How to use Pillow, a fork of PIL,How to use the Python Imaging Library,Python Websites and Tutorials,How to use Envoy,Using Feedparser in Python,Subprocess and Shell Commands in Python, Exceptions Handling, Sockets, GUI, Extentions, XML Programming
+Python Object Oriented - Learning Python in simple and easy steps ,python,xml,script,install.
+
+A beginner's tutorial containing complete knowledge of Python Syntax Object Oriented Language, Methods, Tuples,Learn,Python,Tutorial,Interactive,Free, Tools/Utilities,Getting the most popular pages from your Apache logfile,Make your life easier with Virtualenvwrapper,This site now runs on Django,PythonForBeginners.com has a new owner,How to use Pillow, a fork of PIL,How to use the Python Imaging Library,Python Websites and Tutorials,How to use Envoy,Using Feedparser in Python,Subprocess and Shell Commands in Python, Exceptions Handling, Sockets, GUI, Extentions, XML Programming
 ______________________________________________________________________________________________________________________________
 - [Python Codex](https://www.youtube.com/playlist?list=PL1Bjrbx1Tsx3TELwcMDRlxVjR8uv47o17) 
 
