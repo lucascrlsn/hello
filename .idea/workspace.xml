@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="" />
+    <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MP4s/MP4_concatenation.py" beforeDir="false" afterPath="$PROJECT_DIR$/MP4s/MP4_concatenation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Threading and Multiprocessing/threading_practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/Threading and Multiprocessing/threading_practice.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +33,49 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.multiprocessing_practice">
+    <configuration name="multiprocessing_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Threading and Multiprocessing" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Threading and Multiprocessing/multiprocessing_practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="threading_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Threading and Multiprocessing" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Threading and Multiprocessing/threading_practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tkinter_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -53,6 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.multiprocessing_practice" />
+        <item itemvalue="Python.threading_practice" />
         <item itemvalue="Python.tkinter_practice" />
       </list>
     </recent_temporary>
@@ -83,6 +131,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Reformat" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="328" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581643721513">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="328" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.777@0.23.1280.777" timestamp="1581643721513" />
+    <state x="348" y="23" key="#multiprocessing_practice" timestamp="1581631432260">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="348" y="23" key="#multiprocessing_practice/0.23.1280.777@0.23.1280.777" timestamp="1581631432260" />
+    <state x="348" y="23" key="#threading_practice" timestamp="1581630502779">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="348" y="23" key="#threading_practice/0.23.1280.777@0.23.1280.777" timestamp="1581630502779" />
     <state x="348" y="23" key="#tkinter_practice" timestamp="1581617369522">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -91,22 +151,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1581525931328" />
-    <state width="1259" height="197" key="GridCell.Tab.0.bottom" timestamp="1581617628023">
+    <state width="1259" height="186" key="GridCell.Tab.0.bottom" timestamp="1581640622720">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="197" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581617628023" />
-    <state width="1259" height="197" key="GridCell.Tab.0.center" timestamp="1581617628022">
+    <state width="1259" height="186" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581640622720" />
+    <state width="1259" height="186" key="GridCell.Tab.0.center" timestamp="1581640622719">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="197" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581617628022" />
-    <state width="1259" height="197" key="GridCell.Tab.0.left" timestamp="1581617628022">
+    <state width="1259" height="186" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581640622719" />
+    <state width="1259" height="186" key="GridCell.Tab.0.left" timestamp="1581640622718">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="197" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581617628022" />
-    <state width="1259" height="197" key="GridCell.Tab.0.right" timestamp="1581617628023">
+    <state width="1259" height="186" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581640622718" />
+    <state width="1259" height="186" key="GridCell.Tab.0.right" timestamp="1581640622719">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="197" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581617628023" />
+    <state width="1259" height="186" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581640622719" />
     <state x="240" y="151" key="Vcs.Push.Dialog.v2" timestamp="1581525943960">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

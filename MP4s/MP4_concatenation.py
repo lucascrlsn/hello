@@ -1,29 +1,26 @@
 # Forked from rohitrangan at https://gist.github.com/rohitrangan/3841212 for learning purposes
 
-import sys
-import time
-from subprocess import check_output
+import os
+import glob
 
-for i in range(1, len(sys.argv)):
-    print sys.argv[i],
-    fname = "Part" + str(i) + ".mpg"
-    print fname
-    check_output(["ffmpeg", "-i", sys.argv[i], "-sameq", fname])
 
-print "Converted all mp4's to mpg's. Now combining them into a single file."
+def concatenate():
+    stringa = "ffmpeg -i \"concat:"
+    elenco_video = glob.glob("*.mp4")
+    elenco_file_temp = []
+    for f in elenco_video:
+        file = "temp" + str(elenco_video.index(f) + 1) + ".ts"
+        os.system("ffmpeg -i " + f + " -c copy -bsf:v h264_mp4toannexb -f mpegts " + file)
+        elenco_file_temp.append(file)
+    print(elenco_file_temp)
+    for f in elenco_file_temp:
+        stringa += f
+        if elenco_file_temp.index(f) != len(elenco_file_temp) - 1:
+            stringa += "|"
+        else:
+            stringa += "\" -c copy  -bsf:a aac_adtstoasc output.mp4"
+    print(stringa)
+    os.system(stringa)
 
-check_output("cat Part*.mpg > ./Final.mpg", shell=True)
-print "Removing all the intermediate files..."
-time.sleep(3)
-check_output("rm Part*.mpg", shell=True)
 
-print "Now converting mpg back to mp4."
-print "The size may be smaller than the original mp4 files.",
-print "This is because of a change in the audio and video codec."
-time.sleep(3)
-
-check_output(["ffmpeg", "-i", "Final.mpg", "-vcodec", "libx264", "-acodec", "libvorbis", "-sameq", "Final.mp4"])
-time.sleep(3)
-print "Removing the last remaining mpg file..."
-check_output("rm Final.mpg", shell=True)
-print "Finished merging the files. The output file is Final.mp4"
+concatenate()

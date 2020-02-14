@@ -61,9 +61,6 @@ def run_thread():
         #     end_session()
 
 
-finish = time.perf_counter()
-
-
 def end_session():
     # Completely ends the program, user will not be passed to additional checks in the active session
     url = 'https://github.com/lucascrlsn'
@@ -72,4 +69,6 @@ def end_session():
     print(f'Finished in {round(finish - start, 2)} second(s)')
 
 
+finish = time.perf_counter()
 run_thread()
+
