@@ -10,6 +10,7 @@ from skimage.measure import compare_mse
 
 # https://github.com/dvdtho/python-photo-mosaic/blob/master/mosaic.py
 
+
 def shuffle_first_items(lst, i):
     if not i:
         return lst
@@ -18,8 +19,10 @@ def shuffle_first_items(lst, i):
     random.shuffle(first_few) 
     return first_few + remaining
 
+
 def bound(low, high, value):
     return max(low, min(high, value))
+
 
 class ProgressCounter:
     def __init__(self, total):
@@ -31,6 +34,7 @@ class ProgressCounter:
         sys.stdout.write("Progress: %s%% %s" % (100 * self.counter / self.total, "\r"))
         sys.stdout.flush()
 
+
 def img_mse(im1, im2):
     """Calculates the root mean square error (RSME) between two images"""
     try:
@@ -38,6 +42,7 @@ def img_mse(im1, im2):
     except ValueError:
         print(f'RMS issue, Img1: {im1.size[0]} {im1.size[1]}, Img2: {im2.size[0]} {im2.size[1]}')
         raise KeyboardInterrupt
+
 
 def resize_box_aspect_crop_to_extent(img, target_aspect, centerpoint=None):
     width = img.size[0]
@@ -66,6 +71,7 @@ def resize_box_aspect_crop_to_extent(img, target_aspect, centerpoint=None):
         resize = (0, top, width, bottom)
     return resize
 
+
 def aspect_crop_to_extent(img, target_aspect, centerpoint=None):
     '''
     Crop an image to the desired perspective at the maximum size available.
@@ -76,6 +82,7 @@ def aspect_crop_to_extent(img, target_aspect, centerpoint=None):
     '''
     resize = resize_box_aspect_crop_to_extent(img, target_aspect, centerpoint)
     return img.crop(resize)
+
 
 class Config:
     def __init__(self, tile_ratio=1920/800, tile_width=50, enlargement=8, color_mode='RGB'):
@@ -91,6 +98,7 @@ class Config:
     @property
     def tile_size(self):
         return self.tile_width, self.tile_height # PIL expects (width, height)
+
 
 class TileBox:
     """
@@ -137,6 +145,7 @@ class TileBox:
             del self.tiles[i]
         return match
 
+
 class SourceImage:
     """Processing original image - scaling and cropping as needed."""
     def __init__(self, image_path, config):
@@ -160,6 +169,7 @@ class SourceImage:
         self.image =  large_img.convert(self.config.color_mode)
         print('Main image processed.')
 
+
 class MosaicImage:
     """Holder for the mosaic"""
     def __init__(self, original_img, target, config):
@@ -182,6 +192,7 @@ class MosaicImage:
 
     def save(self):
         self.image.save(self.target)
+
 
 def coords_from_middle(x_count, y_count, y_bias=1, shuffle_first=0, ):
     '''
