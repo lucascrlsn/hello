@@ -1,9 +1,16 @@
 # Adopted from Corey Schafer @ https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/MultiProcessing
+# https://www.youtube.com/watch?v=fKl2JW_qrso
 
 import concurrent.futures
 import time
+import dask
 
 start = time.perf_counter()
+
+if _name_ == '__main__':
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        secs = [3, 3, 3, 3, 3]
+        results = executor.map(do_something, secs)
 
 
 def do_something(seconds):
@@ -12,10 +19,8 @@ def do_something(seconds):
     return f'Done Sleeping...{seconds}'
 
 
-with concurrent.futures.ProcessPoolExecutor() as executor:
-    secs = [5, 4, 3, 2, 1]
-    results = executor.map(do_something, secs)
 
+    #
     # for result in results:
     #     print(result)
 
