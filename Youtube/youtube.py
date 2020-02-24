@@ -1,5 +1,4 @@
 import json
-import re
 import urllib.request
 from pytube import YouTube
 import moviepy.editor as mp
@@ -7,11 +6,9 @@ import speech_recognition as sr
 from os import path
 from pydub import AudioSegment
 import pprint as pp
-import os.path
 from os import path
 import datetime
 import time
-from time import strftime, ctime, gmtime
 from tkinter import *
 import tkinter.messagebox
 from tkinter import ttk
