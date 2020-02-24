@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/mosaic_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Media/mosaic_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/mosaic_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Youtube/youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/youtube.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,12 +178,27 @@
       <option name="project" value="LOCAL" />
       <updated>1581697630841</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="General Reformating">
+      <created>1582511925539</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582511925539</updated>
+    </task>
+    <task id="LOCAL-00004" summary="General Reformating">
+      <created>1582511976576</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582511976576</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reformat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformat" />
+    <MESSAGE value="General Reformating" />
+    <option name="LAST_COMMIT_MESSAGE" value="General Reformating" />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="77" key="#Inspections" timestamp="1581833241124">
@@ -210,10 +221,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="348" y="23" key="#tkinter_practice/0.23.1280.777@0.23.1280.777" timestamp="1581617369522" />
-    <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2" timestamp="1582511925024">
+    <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2" timestamp="1582511976290">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1582511925024" />
+    <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1582511976290" />
     <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1582511930397">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
