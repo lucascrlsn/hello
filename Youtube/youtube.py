@@ -20,7 +20,7 @@ from tkinter import ttk
 ###########################################################################################
 #                                   NOTES                                                 #
 ###########################################################################################
-# Concatenated URL VAR
+# Concatenated URL VAR Format
 # https://www.googleapis.com/youtube/v3/videos?part=snippet&id=iM5kwbF-Mkk&key=
 ###########################################################################################
 
@@ -67,7 +67,6 @@ def user_action():
                 status_bar.delete(0, END)
                 status_bar.insert(10, system_log)
 
-
     elif selection == 'Convert Audio':
         if path.exists(f'{title}.mp3'):
             timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
@@ -96,7 +95,6 @@ def user_action():
                              f'Change your dropdown to \'Download Video\' and submit that first.'
                 status_bar.delete(0, END)
                 status_bar.insert(10, system_log)
-
 
     elif selection == 'Generate Metrics File':
         if path.exists(f'{title}_description.txt'):
@@ -157,11 +155,6 @@ class YouTubeStats:
         YouTube(s).streams.first().download(filename=title)
 
 
-# EXAMPLE:
-# https://youtu.be/iM5kwbF-Mkk
-# v_id = 'iM5kwbF-Mkk'
-# print(title)
-# print(description)
 s = 'https://youtu.be/ZkYOvViSx3E'
 helper = Helper()
 video_id = helper.id_from_url(str(s))
