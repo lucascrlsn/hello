@@ -241,8 +241,8 @@ def coords_from_middle(x_count, y_count, y_bias=1, shuffle_first=0, ):
 
 
 def create_mosaic(
-        source_path='/Users/LucasCarlson/Downloads/mosaic/source/source.jpg',
-        target='/Users/LucasCarlson/Downloads/mosaic/output/done.jpg',
+        source_path='********.jpg',
+        target='/********/done.jpg',
         tile_ratio=1920 / 800,
         tile_width=300,
         enlargement=4,
