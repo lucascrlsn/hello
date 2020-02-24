@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Media/mosaic_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Media/mosaic_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Media/mosaic_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Youtube/youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/youtube.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +36,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.image_processing">
-    <configuration name="image_processing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Media" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.youtube">
+    <configuration name="file_gui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hello" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -42,11 +50,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pillow" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Media" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pillow/image_processing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Media/file_gui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -55,19 +63,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="multiprocessing_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="image_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Threading and Multiprocessing" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Media" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Threading and Multiprocessing/multiprocessing_practice.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Media/image_generator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -76,19 +84,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="threading_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mosaic_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Threading and Multiprocessing" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Media" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Threading and Multiprocessing/threading_practice.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Media/mosaic_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -97,19 +105,40 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tkinter_practice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="my_files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.8" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tkinter" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Media" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tkinter/tkinter_practice.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Media/my_files.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="youtube" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Youtube" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Youtube/youtube.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,10 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.image_processing" />
-        <item itemvalue="Python.multiprocessing_practice" />
-        <item itemvalue="Python.threading_practice" />
-        <item itemvalue="Python.tkinter_practice" />
+        <item itemvalue="Python.youtube" />
+        <item itemvalue="Python.mosaic_1" />
+        <item itemvalue="Python.my_files" />
+        <item itemvalue="Python.image_generator" />
+        <item itemvalue="Python.file_gui" />
       </list>
     </recent_temporary>
   </component>
@@ -160,6 +190,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Reformat" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="241" y="77" key="#Inspections" timestamp="1581833241124">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="241" y="77" key="#Inspections/0.23.1280.777@0.23.1280.777" timestamp="1581833241124" />
     <state x="328" y="146" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581643721513">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -180,22 +214,26 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1581697630613" />
-    <state width="1259" height="186" key="GridCell.Tab.0.bottom" timestamp="1581804436386">
+    <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1582511710391">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="186" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1581804436386" />
-    <state width="1259" height="186" key="GridCell.Tab.0.center" timestamp="1581804436385">
+    <state width="1259" height="141" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1582511710391" />
+    <state width="1259" height="141" key="GridCell.Tab.0.center" timestamp="1582511710390">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="186" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1581804436385" />
-    <state width="1259" height="186" key="GridCell.Tab.0.left" timestamp="1581804436385">
+    <state width="1259" height="141" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1582511710390" />
+    <state width="1259" height="141" key="GridCell.Tab.0.left" timestamp="1582511710389">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="186" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1581804436385" />
-    <state width="1259" height="186" key="GridCell.Tab.0.right" timestamp="1581804436386">
+    <state width="1259" height="141" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1582511710389" />
+    <state width="1259" height="141" key="GridCell.Tab.0.right" timestamp="1582511710390">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="186" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1581804436386" />
+    <state width="1259" height="141" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1582511710390" />
+    <state x="415" y="129" key="RollbackChangesDialog" timestamp="1581817898506">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="415" y="129" key="RollbackChangesDialog/0.23.1280.777@0.23.1280.777" timestamp="1581817898506" />
     <state x="240" y="151" key="Vcs.Push.Dialog.v2" timestamp="1581525943960">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -204,5 +242,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="423" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1581804378808" />
+    <state x="299" y="168" width="683" height="486" key="find.popup" timestamp="1581834794237">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="299" y="168" width="683" height="486" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1581834794237" />
   </component>
 </project>
