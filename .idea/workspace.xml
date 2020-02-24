@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="" />
+    <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Youtube/youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/youtube.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +29,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -237,22 +241,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="89" y="23" width="752" height="777" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1582512382994" />
-    <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1582511930397">
+    <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1582551352322">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1582511930397" />
-    <state width="1259" height="141" key="GridCell.Tab.0.center" timestamp="1582511930395">
+    <state width="1259" height="141" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1582551352322" />
+    <state width="1259" height="141" key="GridCell.Tab.0.center" timestamp="1582551352321">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1582511930395" />
-    <state width="1259" height="141" key="GridCell.Tab.0.left" timestamp="1582511930394">
+    <state width="1259" height="141" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1582551352321" />
+    <state width="1259" height="141" key="GridCell.Tab.0.left" timestamp="1582551352320">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1582511930394" />
-    <state width="1259" height="141" key="GridCell.Tab.0.right" timestamp="1582511930396">
+    <state width="1259" height="141" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1582551352320" />
+    <state width="1259" height="141" key="GridCell.Tab.0.right" timestamp="1582551352321">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1582511930396" />
+    <state width="1259" height="141" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1582551352321" />
     <state x="415" y="129" key="RollbackChangesDialog" timestamp="1581817898506">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
