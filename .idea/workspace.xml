@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Youtube/sentiment_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Youtube/word_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582569321696</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update">
+      <created>1582609288963</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582609288964</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,7 +248,8 @@
     <MESSAGE value="General Reformating" />
     <MESSAGE value="UPDATE" />
     <MESSAGE value="New" />
-    <option name="LAST_COMMIT_MESSAGE" value="New" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="77" key="#Inspections" timestamp="1581833241124">
@@ -262,10 +272,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="348" y="23" key="#tkinter_practice/0.23.1280.777@0.23.1280.777" timestamp="1581617369522" />
-    <state x="206" y="59" width="878" height="696" key="CommitChangelistDialog2" timestamp="1582569321454">
+    <state x="206" y="59" width="878" height="696" key="CommitChangelistDialog2" timestamp="1582609288628">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="206" y="59" width="878" height="696" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1582569321454" />
+    <state x="206" y="59" width="878" height="696" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1582609288628" />
     <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1582569164445">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
