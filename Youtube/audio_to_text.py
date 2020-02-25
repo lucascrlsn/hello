@@ -5,6 +5,7 @@ from pydub import AudioSegment
 import os
 import datetime
 import time
+import re
 
 
 ##############################
@@ -15,11 +16,11 @@ now_min = str(time.localtime().tm_min)
 
 ##############################
 # my_filename file must be an MP3 file for conversion to .wav, or if you already have a .wav you should be fine
-my_filename = '****************************************'
+my_filename = '******************************************'
 my_dir = os.path.dirname(os.path.realpath(__file__))
 
 # ffmpeg must be properly installed on OS, worked well with "brew install"
-AudioSegment.converter = '/****************************************/bin/ffmpeg'
+AudioSegment.converter = '/******************************************/ffmpeg'
 
 
 def audio_to_text():
@@ -43,15 +44,12 @@ def save_transcript():
         # use the audio file as the audio source
         r = sr.Recognizer()
         with sr.AudioFile(AUDIO_FILE) as source:
-                audio = r.record(source, duration=300)  # read the entire audio file
+                audio = r.record(source, duration=60)  # duration sets how much of the audio to read, max 300
+        word_count_audio = r.recognize_google(audio)
+        word_count = len(re.findall(r'\w+', word_count_audio))
         with open(f'{my_filename}_transcript.txt', 'w') as f:
                 # write line to output file
-                timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-                f.write(f'File Creation Date (Local Time): {timestamp}')
-                f.write("\n")
-                f.write(f'Filename: {my_filename}')
-                f.write("\n")
-                f.write(f'Transcription: {r.recognize_google(audio)}')
+                f.write(r.recognize_google(audio))
         print(f'The transcript was saved at {my_dir}/{my_filename}.txt')
 
 
