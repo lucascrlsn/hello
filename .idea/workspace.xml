@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Youtube/sentiment_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Youtube/word_analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582609288964</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="for integration into 'word_analysis.py'">
+      <created>1582609542557</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582609542557</updated>
+    </task>
+    <task id="LOCAL-00012" summary="new">
+      <created>1582609552209</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582609552209</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -249,7 +261,9 @@
     <MESSAGE value="UPDATE" />
     <MESSAGE value="New" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="for integration into 'word_analysis.py'" />
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="77" key="#Inspections" timestamp="1581833241124">
