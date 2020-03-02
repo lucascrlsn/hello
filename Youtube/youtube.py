@@ -10,6 +10,11 @@ import os.path
 from os import path
 
 ##############################
+# Audio to Text MODs
+from pydub import AudioSegment
+import speech_recognition as sr
+
+##############################
 # Youtube JSON MODs
 import json
 import re
@@ -29,13 +34,14 @@ from PIL import Image, ImageTk
 import webbrowser
 
 ##############################
-
+# For logging version checking, TBD
 version = 1
 
 
 def is_internet():
     """
     Query internet using python, exception prevents user from accessing tool without internet connection.
+    :return:
     """
     try:
         urlopen('https://www.google.com', timeout=1)
@@ -54,13 +60,13 @@ is_internet()
 win = Tk()
 win.title("Youtube Handler")
 # Makes GUI non-resizable
-win.resizable(0, 0)
+# win.resizable(0, 0)
 menu = Menu(win)
 win.config(menu=menu, bg='#384048', padx=7, pady=7)
 
 ##############################
 # Tray/Program Icon
-icon_image = Image.open('youtube_ico.png')
+icon_image = Image.open('/Users/************************************************/youtube_ico.png')
 photo = ImageTk.PhotoImage(icon_image)
 win.iconphoto(False, photo)
 
@@ -71,13 +77,18 @@ now_hour = str(time.localtime().tm_hour)
 now_min = str(time.localtime().tm_min)
 
 ##############################
-# Placeholders for Global Edits
+# Placeholders for Global Edits | Common VARs
 video_id = None
 title = ''
+description = ''
 user_input = ''
+my_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Tool Tip Screen share Location
 help_url = 'https://drive.google.com/file/d/1JqbJgrxMqlw6Xgw6oFeT1J0SDvZpWa6t/view'
+
+
+##############################
 
 
 def youtube_help(x):
@@ -87,15 +98,19 @@ def youtube_help(x):
 def display_user_choice(event):
     timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
     selection = user_option_dropdown.get()
+    system_log = f'{timestamp} | {selection} has been chosen, click \'SUBMIT\' to complete your action'
+    # status_bar.delete(0, END)
+    # status_bar.insert(10, system_log)
 
 
 def user_action(self):
+    global title
     selection = user_option_dropdown.get()
     # Get user Link
     s = user_input.get()
     helper = Helper()
     video_id = helper.id_from_url(str(s))
-    api_key = '***************************************'
+    api_key = '************************************************'
     url = f'https://www.googleapis.com/youtube/v3/videos?part=snippet&id={video_id}&key={api_key}'
     yt_stats = YouTubeStats(url)
     title = yt_stats.get_video_title()
@@ -103,74 +118,43 @@ def user_action(self):
     description = yt_stats.get_video_description()
 
     if selection == 'Download Video':
-        if path.exists(f'{title}.mp4'):
+        if path.exists(f'{my_dir}/{title}.mp4'):
             timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
             system_log = f'{timestamp} | Video detected, no download required'
             print(system_log)
+            # status_bar.delete(0, END)
+            # status_bar.insert(10, system_log)
 
         else:
-            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-            answer = tkinter.messagebox.askquestion('Proceed?',
-                                                    'Are you sure you want to continue with the download? Larger files will take some time to display in your active directory')
-            if answer == 'yes':
-                system_log = f'{timestamp} | Downloading, please wait...'
-                downloading_notification = tkinter.messagebox.showinfo('Downloading...', 'Downloading, you will be '
-                                                                                         'notified when it is complete. '
-                                                                                         'Closing this dialogue will not '
-                                                                                         'cancel the process.')
-                yt_stats.download_video(s, title)
-                dir_path = os.path.dirname(os.path.realpath(__file__))
-                download_complete = tkinter.messagebox.showinfo('Complete',
-                                                                f'''Your download has finished and is located at: 
-{dir_path}''')
-                print(system_log)
-            else:
-                system_log = f'{timestamp} | Download canceled'
-                print(system_log)
+            download_video()
 
     elif selection == 'Convert Audio':
-        if path.exists(f'{title}.mp3'):
-            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-            system_log = f'{timestamp} | Audio detected, no conversion is required'
-            print(system_log)
-
-        else:
-            if path.exists(f'{title}.mp4'):
-                timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-                answer = tkinter.messagebox.askquestion('Proceed?',
-                                                        'Are you sure you want to continue with the audio conversion? Larger files will take some time to display in your active directory')
-                if answer == 'yes':
-                    system_log = f'{timestamp} | Video detected, converting...'
-                    print(system_log)
-                    clip = mp.VideoFileClip(f'{title}.mp4')
-                    clip.audio.write_audiofile(f'{title}.mp3')
-                else:
-                    system_log = f'{timestamp} | Audio conversion canceled'
-                    print(system_log)
-
-            else:
-                timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-                system_log = f'{timestamp} | A MP4 video is required before you can convert to audio.' \
-                             f'Change your dropdown to \'Download Video\' and submit that first.'
-                print(system_log)
+        convert_to_mp3()
 
     elif selection == 'Generate Metrics File':
-        if path.exists(f'{title}_description.txt'):
-            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-            system_log = f'{timestamp} | Description File Detected, there is no write required'
-            print(system_log)
+        generate_metrics_report()
+
+    elif selection == 'Generate Transcript':
+        if path.exists(f'{title}_transcript.txt'):
+            pass
+            # timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            # system_log = f'{timestamp} | Transcript Detected, there is no write required'
+            # print(system_log)
+            # status_bar.delete(0, END)
+            # status_bar.insert(10, system_log)
 
         else:
-            with open(f'{title}_description.txt', 'w') as f:
-                # write line to output file
+            if path.exists(f'{title}.mp3'):
+                generate_transcript()
+            else:
                 timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-                f.write(f'File Creation Date (Local Time): {timestamp}')
-                f.write("\n")
-                f.write(f'Filename: {title}')
-                f.write("\n")
-                f.write(f'Description: {description}')
-                system_log = f'{timestamp} | No metadata file detected. {title}.txt was saved in the active directory'
-                print(system_log)
+                print(f'{timestamp} | No .mp3 for {title} detected. Please convert your mp4 to audio first')
+
+    elif selection == 'Generate Transcript from Youtube':
+        download_vid()
+        convert_to_mp3()
+        generate_metrics_report()
+        generate_transcript()
 
     else:
         print('Fail')
@@ -209,6 +193,246 @@ class YouTubeStats:
 
     def download_audio(self, s: str, title: str):
         YouTube(s).streams.first().download(filename=title)
+
+
+# def print_sys_log():
+#     # psl_id = str(id(print_sys_log))
+#     timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+#     # print(f'{timestamp} | {psl_id} | User Queried Youtube')
+#     print(f'{timestamp} | User Queried Youtube')
+
+def download_vid():
+    global title
+    global description
+    selection = user_option_dropdown.get()
+    # Get user Link
+    s = user_input.get()
+    helper = Helper()
+    video_id = helper.id_from_url(str(s))
+    api_key = 'AIzaSyAxE2KLI-sMV-hG-1e5WVJtdvDPsUmLwY0'
+    url = f'https://www.googleapis.com/youtube/v3/videos?part=snippet&id={video_id}&key={api_key}'
+    yt_stats = YouTubeStats(url)
+    title = yt_stats.get_video_title()
+    title = helper.title_to_underscore_title(title)
+    description = yt_stats.get_video_description()
+    timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+    answer = 'yes'
+    # answer = tkinter.messagebox.askquestion('Proceed?',
+    #                                         'Are you sure you want to continue with the download? Larger files will take some time to display in your active directory')
+    if answer == 'yes':
+        system_log = f'{timestamp} | Downloading, please wait...'
+        # downloading_notification = tkinter.messagebox.showinfo('Downloading...', 'Downloading, you will be '
+        #                                                                          'notified when it is complete. '
+        #                                                                          'Closing this dialogue will not '
+        #                                                                          'cancel the process.')
+        # status_bar.delete(0, END)
+        # status_bar.insert(10, system_log)
+        yt_stats.download_video(s, title)
+        # download_complete = tkinter.messagebox.showinfo('Complete','Your download has finished and is located at: {my_dir}')
+        print(system_log)
+    else:
+        system_log = f'{timestamp} | Download canceled'
+        # status_bar.delete(0, END)
+        # status_bar.insert(10, system_log)
+        print(system_log)
+
+
+def convert_to_mp3():
+    if path.exists(f'{my_dir}/{title}.mp3'):
+        timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+        system_log = f'{timestamp} | Audio detected, no conversion is required'
+        # status_bar.delete(0, END)
+        # status_bar.insert(10, system_log)
+        print(system_log)
+
+    else:
+        if path.exists(f'{my_dir}/{title}.mp4'):
+            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            answer = 'yes'
+            # answer = tkinter.messagebox.askquestion('Proceed?',
+            #                                         'Are you sure you want to continue with the audio conversion? Larger files will take some time to display in your active directory')
+            if answer == 'yes':
+                system_log = f'{timestamp} | Video detected, converting...'
+                print(system_log)
+                # status_bar.delete(0, END)
+                # status_bar.insert(10, system_log)
+                clip = mp.VideoFileClip(f'{title}.mp4')
+                clip.audio.write_audiofile(f'{title}.mp3')
+            else:
+                system_log = f'{timestamp} | Audio conversion canceled'
+                print(system_log)
+                # status_bar.delete(0, END)
+                # status_bar.insert(10, system_log)
+
+        else:
+            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            system_log = f'{timestamp} | A MP4 video is required before you can convert to audio.' \
+                         f'Change your dropdown to \'Download Video\' and submit that first.'
+            print(system_log)
+            # status_bar.delete(0, END)
+            # status_bar.insert(10, system_log)
+
+
+def generate_metrics_report():
+    if path.exists(f'{my_dir}/{title}_description.txt'):
+        timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+        system_log = f'{timestamp} | Description File Detected, there is no write required'
+        print(system_log)
+        # status_bar.delete(0, END)
+        # status_bar.insert(10, system_log)
+
+    else:
+        with open(f'{title}_description.txt', 'w') as f:
+            # write line to output file
+            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            f.write(f'File Creation Date (Local Time): {timestamp}')
+            f.write("\n")
+            f.write(f'Filename: {title}')
+            f.write("\n")
+            f.write(f'Description: {description}')
+            system_log = f'{timestamp} | No metadata file detected. {title}.txt was saved in the active directory'
+            print(system_log)
+            # status_bar.delete(0, END)
+            # status_bar.insert(10, system_log)
+
+
+def generate_transcript():
+    global title
+    timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+    my_filename = title
+    my_dir = os.path.dirname(os.path.realpath(__file__))
+    # Convert to .wave
+    print(f'{timestamp} | \'{my_filename}\' detected')
+    sound = AudioSegment.from_mp3(f'{my_filename}.mp3')
+    print(f'{timestamp} | Converting to .wav, standby...')
+    sound.export(f'{my_filename}.wav', format='wav')
+    print(f'{timestamp} | A .wav file has been created. ')
+    ############################################
+    # VARs
+    # ffmpeg must be properly installed on OS, worked well with "brew install"
+    AudioSegment.converter = '/usr/************************************************/ffmpeg'
+
+    # Input audio file to be sliced
+    audio = AudioSegment.from_wav(f'{my_dir}/{title}.wav')
+
+    # Length of the audio file in milliseconds
+    n = len(audio)
+
+    # Variable to count the number of sliced chunks
+    counter = 1
+
+    # Text file to write the recognized audio
+    fh = open(f'{my_dir}/{title}_transcript.txt', 'w+')
+
+    # Interval length at which to slice the audio file.
+    # If length is 22 seconds, and interval is 5 seconds,
+    # The chunks created will be:
+    # chunk1 : 0 - 5 seconds
+    # chunk2 : 5 - 10 seconds
+    # chunk3 : 10 - 15 seconds
+    # chunk4 : 15 - 20 seconds
+    # chunk5 : 20 - 22 seconds
+    min_interval = 3
+    interval = (min_interval * 60) * 1000  # multiply to convert to milliseconds
+    number_of_chunks = round((n / interval), 0) - 1
+    timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+    print(f'{timestamp} | Splitting your audio into {number_of_chunks} {min_interval}-minute '
+          f'files to convert from voice to text')
+
+    # Length of audio to overlap.
+    # If length is 22 seconds, and interval is 5 seconds,
+    # With overlap as 1.5 seconds,
+    # The chunks created will be:
+    # chunk1 : 0 - 5 seconds
+    # chunk2 : 3.5 - 8.5 seconds
+    # chunk3 : 7 - 12 seconds
+    # chunk4 : 10.5 - 15.5 seconds
+    # chunk5 : 14 - 19.5 seconds
+    # chunk6 : 18 - 22 seconds
+    overlap = 1.5 * 1000
+
+    # Initialize start and end seconds to 0
+    start = 0
+    end = 0
+
+    # Flag to keep track of end of file.
+    # When audio reaches its end, flag is set to 1 and we break
+    flag = 0
+    ############################################
+    # End VARs
+    # Iterate from 0 to end of the file,
+    # with increment = interval
+    for i in range(0, 2 * n, interval):
+        # During first iteration,
+        # start is 0, end is the interval
+        if i == 0:
+            start = 0
+            end = interval
+        # All other iterations,
+        # start is the previous end - overlap
+        # end becomes end + interval
+        else:
+            start = end - overlap
+            end = start + interval
+        # When end becomes greater than the file length,
+        # end is set to the file length
+        # flag is set to 1 to indicate break.
+        if end >= n:
+            end = n
+            flag = 1
+        # Storing audio file from the defined start to end
+        chunk = audio[start:end]
+        # Filename / Path to store the sliced audio
+        filename = f'{title}_chunk_' + str(counter) + '.wav'
+        # Store the sliced audio file to the defined path
+        chunk.export(title, format="wav")
+        # Get Timestamp
+        timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+        # Print information about the current chunk
+        print(f'{timestamp} | Processing chunk ' + str(counter) + '. Start = '
+              + str(start) + ' end = ' + str(end))
+        # Increment counter for the next chunk
+        counter = counter + 1
+        # Here, Google Speech Recognition is used
+        # to take each chunk and recognize the text in it.
+        # Specify the audio file to recognize
+        AUDIO_FILE = title
+        # Initialize the recognizer
+        r = sr.Recognizer()
+        # Traverse the audio file and listen to the audio
+        with sr.AudioFile(AUDIO_FILE) as source:
+            audio_recorded = r.record(source)
+
+        # Try to recognize the listened audio
+        # And catch expectations.
+        try:
+            rec = r.recognize_google(audio_recorded)
+            # If recognized, write into the file.
+            fh.write('\n')
+            fh.write('\n')
+            fh.write(f'Transcript #{counter - 1}')
+            fh.write('\n')
+            fh.write(rec + ' ')
+        # If google could not understand the audio
+        except sr.UnknownValueError:
+            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            print(f'{timestamp} | Could not understand audio in')
+            counter = counter - 1
+        # If the results cannot be requested from Google.
+        # Probably an internet connection error.
+        except sr.RequestError as e:
+            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            print(f'{timestamp} | Could not request results')
+            counter = counter - 1
+        # Check for flag.
+        # If flag is 1, end of the whole audio reached.
+        # Close the file and break.
+        if flag == 1:
+            print(f'{timestamp} | Processing Complete!')
+            fh.close()
+            timestamp = timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            print(f'{timestamp} | The audio transcript was saved at {my_dir}/{title}_transcript.txt')
+            break
 
 
 def display_results():
@@ -288,7 +512,8 @@ ttk_style.theme_use('combostyle')
 
 # Combobox
 user_option_dropdown = ttk.Combobox(win, width='15', values=['--CHOOSE ACTION--', 'Download Video', 'Convert Audio',
-                                                             'Generate Metrics File', 'Generate Transcript'])
+                                                             'Generate Metrics File', 'Generate Transcript',
+                                                             'Generate Transcript from Youtube'])
 user_option_dropdown.current(0)
 user_option_dropdown.grid(row=0, column=13)
 user_option_dropdown.bind('<<ComboboxSelected>>', display_user_choice)
@@ -321,4 +546,6 @@ e1 = Entry(win, textvariable=user_input, width=25, highlightbackground='red', hi
 e1.grid(row=0, column=1, sticky='WE')
 
 win.mainloop()
+
+
 
