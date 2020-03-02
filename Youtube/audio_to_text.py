@@ -12,14 +12,14 @@ now_min = str(time.localtime().tm_min)
 
 ##############################
 # Initial Config Vars
-my_filename = '**********************************************'
+my_filename = '**********************************'
 my_dir = os.path.dirname(os.path.realpath(__file__))
 my_file = f'{my_dir}/{my_filename}.wav'
 sound = AudioSegment.from_mp3(f'{my_dir}/{my_filename}.wav')
 
 ####################
 # ffmpeg must be properly installed on OS, worked well with "brew install"
-AudioSegment.converter = '**********************************************'
+AudioSegment.converter = '**********************************/ffmpeg'
 
 # Input audio file to be sliced
 audio = AudioSegment.from_wav(f'{my_filename}.wav')

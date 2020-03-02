@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Youtube/moderngl_testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Youtube/audio_to_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/audio_to_text.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582609552209</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added .wav split capability. Splits file into parts then uses speech recognition. Combines all outputs into one .txt.">
+      <created>1583112905001</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583112905002</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -264,7 +270,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="for integration into 'word_analysis.py'" />
     <MESSAGE value="new" />
-    <option name="LAST_COMMIT_MESSAGE" value="new" />
+    <MESSAGE value="Added .wav split capability. Splits file into parts then uses speech recognition. Combines all outputs into one .txt." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .wav split capability. Splits file into parts then uses speech recognition. Combines all outputs into one .txt." />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="77" key="#Inspections" timestamp="1581833241124">
