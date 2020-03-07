@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc35bf82-7c55-4d3c-b734-a3bf7005f0ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Youtube/audio_to_text.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Youtube/youtube.py" beforeDir="false" afterPath="$PROJECT_DIR$/Youtube/youtube.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
       <recent name="$PROJECT_DIR$/Media" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.moderngl_testing">
+  <component name="RunManager" selected="Python.youtube">
     <configuration name="image_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hello" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.moderngl_testing" />
         <item itemvalue="Python.youtube" />
+        <item itemvalue="Python.moderngl_testing" />
         <item itemvalue="Python.mosaic_1" />
         <item itemvalue="Python.my_files" />
         <item itemvalue="Python.image_generator" />
@@ -267,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583113002121</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Consolidated all functions into one. Go to user options dropdown and choose 'Generate Transcript from Youtube.' and the program will handle all processing automatically. Voice to text now works by splitting the audio into chunks and then restitching the text together into one .txt for easy reading.">
+      <created>1583170166833</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1583170166833</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -280,7 +285,8 @@
     <MESSAGE value="for integration into 'word_analysis.py'" />
     <MESSAGE value="new" />
     <MESSAGE value="Added .wav split capability. Splits file into parts then uses speech recognition. Combines all outputs into one .txt." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added .wav split capability. Splits file into parts then uses speech recognition. Combines all outputs into one .txt." />
+    <MESSAGE value="Consolidated all functions into one. Go to user options dropdown and choose 'Generate Transcript from Youtube.' and the program will handle all processing automatically. Voice to text now works by splitting the audio into chunks and then restitching the text together into one .txt for easy reading." />
+    <option name="LAST_COMMIT_MESSAGE" value="Consolidated all functions into one. Go to user options dropdown and choose 'Generate Transcript from Youtube.' and the program will handle all processing automatically. Voice to text now works by splitting the audio into chunks and then restitching the text together into one .txt for easy reading." />
   </component>
   <component name="WindowStateProjectService">
     <state x="241" y="77" key="#Inspections" timestamp="1581833241124">
@@ -307,22 +313,22 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="252" y="84" width="878" height="696" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1583170166516" />
-    <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1582935235145">
+    <state width="1259" height="141" key="GridCell.Tab.0.bottom" timestamp="1583190290596">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1582935235145" />
-    <state width="1259" height="141" key="GridCell.Tab.0.center" timestamp="1582935235144">
+    <state width="1259" height="141" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1583190290596" />
+    <state width="1259" height="141" key="GridCell.Tab.0.center" timestamp="1583190290595">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1582935235144" />
-    <state width="1259" height="141" key="GridCell.Tab.0.left" timestamp="1582935235144">
+    <state width="1259" height="141" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1583190290595" />
+    <state width="1259" height="141" key="GridCell.Tab.0.left" timestamp="1583190290594">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1582935235144" />
-    <state width="1259" height="141" key="GridCell.Tab.0.right" timestamp="1582935235144">
+    <state width="1259" height="141" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1583190290594" />
+    <state width="1259" height="141" key="GridCell.Tab.0.right" timestamp="1583190290595">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1259" height="141" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1582935235144" />
+    <state width="1259" height="141" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1583190290595" />
     <state width="1259" height="245" key="GridCell.Tab.1.bottom" timestamp="1582934570463">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

@@ -66,7 +66,7 @@ win.config(menu=menu, bg='#384048', padx=7, pady=7)
 
 ##############################
 # Tray/Program Icon
-icon_image = Image.open('/Users/************************************************/youtube_ico.png')
+icon_image = Image.open('/****************************************************/youtube_ico.png')
 photo = ImageTk.PhotoImage(icon_image)
 win.iconphoto(False, photo)
 
@@ -83,6 +83,11 @@ title = ''
 description = ''
 user_input = ''
 my_dir = os.path.dirname(os.path.realpath(__file__))
+
+# '''If user chooses generate transcript from Youtube we must alter functions to rely on Helper Class.
+# CONNECT = Generate Transcript
+# DISCONNECT = Singular actiins such as generate audio or generate description .txt'''
+# action_type = ''
 
 # Tool Tip Screen share Location
 help_url = 'https://drive.google.com/file/d/1JqbJgrxMqlw6Xgw6oFeT1J0SDvZpWa6t/view'
@@ -110,7 +115,7 @@ def user_action(self):
     s = user_input.get()
     helper = Helper()
     video_id = helper.id_from_url(str(s))
-    api_key = '************************************************'
+    api_key = '****************************************************'
     url = f'https://www.googleapis.com/youtube/v3/videos?part=snippet&id={video_id}&key={api_key}'
     yt_stats = YouTubeStats(url)
     title = yt_stats.get_video_title()
@@ -126,15 +131,18 @@ def user_action(self):
             # status_bar.insert(10, system_log)
 
         else:
-            download_video()
+            download_vid()
 
     elif selection == 'Convert Audio':
+        # action_type = 'DISCONNECT'
         convert_to_mp3()
 
     elif selection == 'Generate Metrics File':
+        # action_type = 'DISCONNECT'
         generate_metrics_report()
 
     elif selection == 'Generate Transcript':
+        # action_type = 'DISCONNECT'
         if path.exists(f'{title}_transcript.txt'):
             pass
             # timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
@@ -151,10 +159,15 @@ def user_action(self):
                 print(f'{timestamp} | No .mp3 for {title} detected. Please convert your mp4 to audio first')
 
     elif selection == 'Generate Transcript from Youtube':
+        # action_type == 'CONNECT'
+        start = time.perf_counter()
         download_vid()
         convert_to_mp3()
         generate_metrics_report()
         generate_transcript()
+        finish = time.perf_counter()
+        timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+        print(f'{timestamp} | Processing Complete! Finished in {round(finish - start / 60, 0)} minutes')
 
     else:
         print('Fail')
@@ -215,21 +228,25 @@ def download_vid():
     title = yt_stats.get_video_title()
     title = helper.title_to_underscore_title(title)
     description = yt_stats.get_video_description()
-    timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
     answer = 'yes'
     # answer = tkinter.messagebox.askquestion('Proceed?',
     #                                         'Are you sure you want to continue with the download? Larger files will take some time to display in your active directory')
     if answer == 'yes':
+        start_download = time.perf_counter()
+        timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
         system_log = f'{timestamp} | Downloading, please wait...'
         # downloading_notification = tkinter.messagebox.showinfo('Downloading...', 'Downloading, you will be '
         #                                                                          'notified when it is complete. '
         #                                                                          'Closing this dialogue will not '
         #                                                                          'cancel the process.')
         # status_bar.delete(0, END)
-        # status_bar.insert(10, system_log)
+        # status_bar.insert(10, system_log)2
+        print(system_log)
         yt_stats.download_video(s, title)
         # download_complete = tkinter.messagebox.showinfo('Complete','Your download has finished and is located at: {my_dir}')
-        print(system_log)
+        timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+        finish_download = time.perf_counter()
+        print(f'{timestamp} | Download complete in {round(finish_download - start_download, 2)} seconds!')
     else:
         system_log = f'{timestamp} | Download canceled'
         # status_bar.delete(0, END)
@@ -238,13 +255,16 @@ def download_vid():
 
 
 def convert_to_mp3():
+    # if action_type == 'CONNECT':
+    #     title = title
+    # else:
+    #     title = user_input.get()
     if path.exists(f'{my_dir}/{title}.mp3'):
         timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
         system_log = f'{timestamp} | Audio detected, no conversion is required'
         # status_bar.delete(0, END)
         # status_bar.insert(10, system_log)
         print(system_log)
-
     else:
         if path.exists(f'{my_dir}/{title}.mp4'):
             timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
@@ -252,12 +272,18 @@ def convert_to_mp3():
             # answer = tkinter.messagebox.askquestion('Proceed?',
             #                                         'Are you sure you want to continue with the audio conversion? Larger files will take some time to display in your active directory')
             if answer == 'yes':
+                timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+                start_conversion = time.perf_counter()
                 system_log = f'{timestamp} | Video detected, converting...'
                 print(system_log)
                 # status_bar.delete(0, END)
                 # status_bar.insert(10, system_log)
                 clip = mp.VideoFileClip(f'{title}.mp4')
                 clip.audio.write_audiofile(f'{title}.mp3')
+                timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+                end_conversion = time.perf_counter()
+                print(
+                    f'{timestamp} | Your video was converted to an mp3 file in {round(end_conversion - start_conversion, 2)} seconds!')
             else:
                 system_log = f'{timestamp} | Audio conversion canceled'
                 print(system_log)
@@ -266,8 +292,8 @@ def convert_to_mp3():
 
         else:
             timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-            system_log = f'{timestamp} | A MP4 video is required before you can convert to audio.' \
-                         f'Change your dropdown to \'Download Video\' and submit that first.'
+            system_log = f'{timestamp} | An MP4 video is required before you can convert to audio.' \
+                         f' Change your dropdown to \'Download Video\' and submit that first.'
             print(system_log)
             # status_bar.delete(0, END)
             # status_bar.insert(10, system_log)
@@ -298,19 +324,23 @@ def generate_metrics_report():
 
 def generate_transcript():
     global title
+    global my_dir
+    # if action_type == 'CONNECT':
+    #     title = title
+    # else:
+    #     title = user_input.get()
     timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-    my_filename = title
     my_dir = os.path.dirname(os.path.realpath(__file__))
     # Convert to .wave
-    print(f'{timestamp} | \'{my_filename}\' detected')
-    sound = AudioSegment.from_mp3(f'{my_filename}.mp3')
+    print(f'{timestamp} | \'{title}\' detected')
+    sound = AudioSegment.from_mp3(f'{title}.mp3')
     print(f'{timestamp} | Converting to .wav, standby...')
-    sound.export(f'{my_filename}.wav', format='wav')
+    sound.export(f'{title}.wav', format='wav')
     print(f'{timestamp} | A .wav file has been created. ')
     ############################################
     # VARs
     # ffmpeg must be properly installed on OS, worked well with "brew install"
-    AudioSegment.converter = '/usr/************************************************/ffmpeg'
+    AudioSegment.converter = '/****************************************************/ffmpeg'
 
     # Input audio file to be sliced
     audio = AudioSegment.from_wav(f'{my_dir}/{title}.wav')
@@ -332,12 +362,12 @@ def generate_transcript():
     # chunk3 : 10 - 15 seconds
     # chunk4 : 15 - 20 seconds
     # chunk5 : 20 - 22 seconds
-    min_interval = 3
+    min_interval = 1
     interval = (min_interval * 60) * 1000  # multiply to convert to milliseconds
     number_of_chunks = round((n / interval), 0) - 1
     timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
-    print(f'{timestamp} | Splitting your audio into {number_of_chunks} {min_interval}-minute '
-          f'files to convert from voice to text')
+    print(f'{timestamp} | Splitting your audio into {number_of_chunks}, {min_interval}-minute '
+          f'files for accurate voice to text conversion')
 
     # Length of audio to overlap.
     # If length is 22 seconds, and interval is 5 seconds,
@@ -428,9 +458,8 @@ def generate_transcript():
         # If flag is 1, end of the whole audio reached.
         # Close the file and break.
         if flag == 1:
-            print(f'{timestamp} | Processing Complete!')
             fh.close()
-            timestamp = timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
+            timestamp = datetime.datetime.strptime(time.ctime(), "%a %b %d %H:%M:%S %Y")
             print(f'{timestamp} | The audio transcript was saved at {my_dir}/{title}_transcript.txt')
             break
 
@@ -511,9 +540,13 @@ ttk_style.theme_create('combostyle', parent='alt',
 ttk_style.theme_use('combostyle')
 
 # Combobox
-user_option_dropdown = ttk.Combobox(win, width='15', values=['--CHOOSE ACTION--', 'Download Video', 'Convert Audio',
-                                                             'Generate Metrics File', 'Generate Transcript',
-                                                             'Generate Transcript from Youtube'])
+user_option_dropdown = ttk.Combobox(win, width='15', values=['--CHOOSE ACTION--',
+                                                             'Download Video',
+                                                             'Convert Audio',
+                                                             'Generate Metrics File',
+                                                             'Generate Transcript',
+                                                             'Generate Transcript from Youtube'
+                                                             ])
 user_option_dropdown.current(0)
 user_option_dropdown.grid(row=0, column=13)
 user_option_dropdown.bind('<<ComboboxSelected>>', display_user_choice)
