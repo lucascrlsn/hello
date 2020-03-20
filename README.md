@@ -29,7 +29,7 @@ Contains a variety of Python concepts primarily to do with building GUI's with T
 ______________________________________________________________________________________________________________________________
 - [LucidProgramming](https://www.youtube.com/playlist?list=PL5tcWHG-UPH29oYVpxP4B-boItTS7n49G)
 
-A short five-video playlist great for getting the begginger started with APIs. I have completed this and built my own [Youtube GUI](https://github.com/lucascrlsn/hello_py/tree/master/Youtube%20Tool) with it. 
+A short five-video playlist great for getting the begginger started with APIs. I have completed this and built my own [Youtube GUI](https://github.com/lucascrlsn/youtube) with it. 
 ______________________________________________________________________________________________________________________________
 - [Microsoft Developers](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
 
