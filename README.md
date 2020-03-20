@@ -29,7 +29,9 @@ Contains a variety of Python concepts primarily to do with building GUI's with T
 ______________________________________________________________________________________________________________________________
 - [LucidProgramming](https://www.youtube.com/playlist?list=PL5tcWHG-UPH29oYVpxP4B-boItTS7n49G)
 
-A short five-video playlist great for getting the begginger started with APIs. I have completed this and built my own [Youtube GUI](https://github.com/lucascrlsn/youtube) with it. 
+A short five-video playlist great for getting the begginger started with APIs. 
+
+** I have been building a Youtube GUI for quite some time now and can now say that it is mostly complete! The link to the project is [HERE](https://github.com/lucascrlsn/youtube). The GUI can download Youtube videos, convert them to MP3, generate a description file of your video, and create a written transcript of the audio. Please let me know what you think! (p.s., if you want to use it yourself be sure to install ffmpeg and also get your API key.)
 ______________________________________________________________________________________________________________________________
 - [Microsoft Developers](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
 
