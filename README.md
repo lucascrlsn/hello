@@ -19,10 +19,14 @@ In these Python Beginner Tutorials, we will be learning the fundamentals of Pyth
 
 For the difference between Threading and Multi-Processing try [this video](https://www.youtube.com/watch?v=IEEhzQoKtQU)
 ______________________________________________________________________________________________________________________________
-- [Eric Sandberg: KivyMD Playlist](https://www.youtube.com/playlist?list=PLy5hjmUzdc0nMkzhphsqgPCX62NFhkell)
+- [Eric Sandberg](https://www.youtube.com/channel/UCMMitT9SCbWlEcEkemnsxQg)
 
-16 Videos
+Open source Python library for rapid development of applications that make use of innovative user interfaces, such as multi-touch apps. See [kivy.org](https://kivy.org/#home) for more information. I have tried learing KivyMD first but it appears it is better to start with Kivy. 
 
+
+[Kivy Quickly](https://www.youtube.com/playlist?list=PLy5hjmUzdc0mSl1d8dHBtk1730deh7rKX): 6 Videos
+
+[KivyMD](https://www.youtube.com/playlist?list=PLy5hjmUzdc0nMkzhphsqgPCX62NFhkell): 16 Videos
 ______________________________________________________________________________________________________________________________
 - [freeCodeCamp](https://www.youtube.com/watch?v=rfscVS0vtbw&list=PLWKjhJtqVAbnqBxcdjVGgT3uVR10bzTEB)
 
