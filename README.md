@@ -19,6 +19,11 @@ In these Python Beginner Tutorials, we will be learning the fundamentals of Pyth
 
 For the difference between Threading and Multi-Processing try [this video](https://www.youtube.com/watch?v=IEEhzQoKtQU)
 ______________________________________________________________________________________________________________________________
+- [Eric Sandberg: KivyMD Playlist](https://www.youtube.com/playlist?list=PLy5hjmUzdc0nMkzhphsqgPCX62NFhkell)
+
+16 Videos
+
+______________________________________________________________________________________________________________________________
 - [freeCodeCamp](https://www.youtube.com/watch?v=rfscVS0vtbw&list=PLWKjhJtqVAbnqBxcdjVGgT3uVR10bzTEB)
 
 A four hour video covering the basics starting from install and ending with the python interpreter.
