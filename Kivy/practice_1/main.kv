@@ -1,0 +1,13 @@
+LabelButton:
+    text: 'Hi! How are you doing today? This is a test of the \'on_release\' method. Click on the screen!'
+    canvas.before:
+        Color:
+            rgb: (1,0,0,1) if self.state == 'normal' else (1,1,1,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    on_release:
+        self.text = 'Aloha'
+
+
+
