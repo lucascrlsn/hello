@@ -4,22 +4,24 @@
 # from vaderSentiment.vaderSentiment module. 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+sentence = '''This is a test of Vader Sentiment.'''
 
-# function to print sentiments
-# of the sentence. 
+
 def sentiment_scores(sentence):
+    # function to print sentiments
+    # of the sentence.
     # Create a SentimentIntensityAnalyzer object.
     sid_obj = SentimentIntensityAnalyzer()
 
     # polarity_scores method of SentimentIntensityAnalyzer 
-    # oject gives a sentiment dictionary. 
-    # which contains pos, neg, neu, and compound scores. 
+    # object gives a sentiment dictionary
+    # which contains pos, neg, neu, and compound scores
     sentiment_dict = sid_obj.polarity_scores(sentence)
 
-    print("Overall sentiment dictionary is : ", sentiment_dict)
-    print("sentence was rated as ", sentiment_dict['neg'] * 100, "% Negative")
-    print("sentence was rated as ", sentiment_dict['neu'] * 100, "% Neutral")
-    print("sentence was rated as ", sentiment_dict['pos'] * 100, "% Positive")
+    # print("Overall sentiment dictionary is : ", sentiment_dict)
+    print("sentence was rated as ", round(sentiment_dict['neg']*100, 2), "% Negative")
+    print("sentence was rated as ", round(sentiment_dict['neu']*100, 2), "% Neutral")
+    print("sentence was rated as ", round(sentiment_dict['pos']*100, 2), "% Positive")
 
     print("Sentence Overall Rated As", end=" ")
 
@@ -33,20 +35,12 @@ def sentiment_scores(sentence):
     else:
         print("Neutral")
 
-    # Driver code
+
+def sentiment():
+    if __name__ == "__main__":
+        global sentence
+        print('\nSentiment Results :')
+        sentiment_scores(sentence)
 
 
-if __name__ == "__main__":
-    print("\n1st statement :")
-    sentence = "the Apostle Paul is determined and maybe more than a little angry he's writing the church at thessalonica beautiful city in Macedonia."
-
-    # function calling 
-sentiment_scores(sentence)
-
-print("\n2nd Statement :")
-sentence = "he loves the people there they are as he says his glory and joy and what annoys the profit but annoys the preacher is that they are under incredible pressure and therefore he decides to write a letter to them to comfort them and to make sure they can withstand the heat that they're going under"
-sentiment_scores(sentence)
-
-print("\n3rd Statement :")
-sentence = "I am elated, happy, and joyfull."
-sentiment_scores(sentence)
+sentiment()
