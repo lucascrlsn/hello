@@ -1,8 +1,4 @@
 **Youtube Beginners Playlists:**
-- [Ajay Mohandhas](https://www.youtube.com/channel/UCvOEz4Bf8IxgMW1tKdcnrJQ)
-
-Specializes in [Pandas](https://pandas.pydata.org/) and [Numpy](https://numpy.org/) 
-______________________________________________________________________________________________________________________________
 - [Code Club Day](https://www.youtube.com/playlist?list=PLSHvUrpSpVBC2O0E8rYddPsyj_mswW1Ev)
 
 Covers operators, input and output operations, and control statements.
