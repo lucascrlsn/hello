@@ -4,7 +4,14 @@
 # from vaderSentiment.vaderSentiment module. 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-sentence = '''This is a test of Vader Sentiment.'''
+# NEUTRAL
+# sentence = '''This is a test of Vader Sentiment.'''
+
+# POSITIVE
+# sentence = '''Vader is great, he loves bright sunny days.'''
+
+# NEGATIVE
+sentence = '''Vader is angry at the world. The dark side makes him livid.'''
 
 
 def sentiment_scores(sentence):
