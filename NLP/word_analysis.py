@@ -10,9 +10,9 @@ from nltk.tokenize import word_tokenize
 import io
 ##################################################
 my_dir = os.path.dirname(os.path.realpath(__file__))
-file = '***********************************************'
+filename = 'don_t_waste_your_mornings_ask_pastor_john_transcript'
 
-text = f'{my_dir}/{file}.txt'
+text = f'{my_dir}/{filename}.txt'
 
 
 def remove_stop_words():
@@ -42,7 +42,7 @@ def show_nouns():
     for word, tag in pos:
         if tag in selective_pos:
             selective_pos_words.append((word))
-    print(f'NOUNS: {selective_pos_words}')
+    pp.pprint(f'NOUNS: {selective_pos_words}')
 
 
 def show_verbs():
@@ -55,7 +55,7 @@ def show_verbs():
     for word, tag in pos:
         if tag in selective_pos:
             selective_pos_words.append((word))
-    print(f'VERBS: {selective_pos_words}')
+    pp.pprint(f'VERBS: {selective_pos_words}')
 
 
 
@@ -63,5 +63,5 @@ def show_verbs():
 # Functions
 # process_transcript()
 # remove_stop_words()
-show_nouns()
-# show_verbs()
+# show_nouns()
+show_verbs()
