@@ -6,9 +6,12 @@ import pprint as pp
 """gensim==3.8.3 is required to summarize per https://discuss.streamlit.io/t/no-module-named-gensim-summarization/11780/8. 
 PRI Source: https://radimrehurek.com/gensim/auto_examples/tutorials/run_summarization.html#sphx-glr-download-auto-examples-tutorials-run-summarization-py """
 
+content = ''
+
 
 def get_summary():
-    t = open('don_t_waste_your_mornings_ask_pastor_john_transcript.txt', 'r')
+    global content
+    t = open(f'{content}.txt', 'r')
     file = t.read()
     source = file
     # Summarize | can use  word_count or ratio
@@ -16,14 +19,15 @@ def get_summary():
 
 
 def get_keywords():
-    t = open('don_t_waste_your_mornings_ask_pastor_john_transcript.txt', 'r')
+    global content
+    t = open(f'{content}.txt', 'r')
     file = t.read()
     source = file
     # Print Keywords
     pp.pprint(keywords(source))
 
 
-get_keywords()
-
+# get_keywords()
+get_summary()
 
 
